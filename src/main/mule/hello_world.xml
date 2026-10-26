@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="hello_worldFlow" doc:id="297a9067-fe31-4b2b-9a37-c204d7626f25" >
 		<http:listener doc:name="Listener" doc:id="8562e0ae-ceaf-4c56-8f16-39ec52b33a34" config-ref="HTTP_Listener_config" path="/hello"/>
+		<logger level="INFO" doc:name="Logger" doc:id="e56f108d-b3af-4850-9515-5de46e41025a" message="logging before set payload"/>
 		<set-payload value='"Hello World!! 26/10/2026"' doc:name="Set Payload" doc:id="fa79204b-aa59-4541-833b-9002e8ddadaa" />
 	</flow>
 </mule>
